@@ -23,8 +23,7 @@ Fetchedresults = [
 
 ExceededQueues = [
 	queue for queue in Fetchedresults
-	if ((queue["usageUpload"] > queue["LimitUpload"]) or (queue["usageDownload"] > queue["LimitDownload"]))
-	and (queue["LimitUpload"] != 0 or queue["LimitDownload"] != 0)
+	if (queue["usageUpload"] > queue["LimitUpload"] and queue["LimitUpload"] != 0 ) or (queue["usageDownload"] > queue["LimitDownload"] and queue["LimitDownload"] != 0)
 ]
 
 print(ExceededQueues)
