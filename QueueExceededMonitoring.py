@@ -1,3 +1,8 @@
+#!/usr/bin/python
+
+import routeros_api
+
+
 connection = routeros_api.RouterOsApiPool(
     "host",
     username="username",
